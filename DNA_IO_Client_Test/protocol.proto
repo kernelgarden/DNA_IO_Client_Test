@@ -1,0 +1,65 @@
+syntax = "proto3";
+package dna_info;
+
+// 패킷의 헤더 정보
+enum packet_type {
+	LOGIN_REQ = 0;
+	LOGIN_RES = 1;
+	USER_INFO = 2;
+	SYNC_INFO_S = 3;
+	SYNC_INFO_C = 4;
+	CHAT_REQ = 5;
+	CHAT_RES = 6;
+}
+
+// 패킷들을 구분할 수 있는 헤더
+message PacketHeader_PB {
+	uint32 packet_size = 1;
+	int32 packet_type = 2;
+}
+
+// 로그인시 클라이언트에서 서버로 전송하는 패킷이다.
+message LoginRequest {
+	string id = 2;		// 유저의 id
+	string passwd = 3;  // 유저의 pw
+}
+
+// 로그인 요청 처리에 따른 서버의 응답 패킷이다.
+message LoginResponse {
+	int32 response_code = 2;  // 처리에 대한 정보를 담고 있음
+}
+
+// 채널 서버에서 유저 세션을 생성한 후 클라이언트로 보내주는 패킷이다.
+message UserInfo {
+	int32 identify_id = 2;
+	int32 channel_num = 3;
+	int32 session_num = 4;
+}
+
+// 동기화를 위해 서버에서 유저들의 정보들을 뿌려주기 위해 사용하는 패킷이다.
+message SyncInfo_S {
+	message User {
+		int32 user_id = 1;
+		int32 x_pos = 2;
+		int32 y_pos = 3;
+		int32 vec = 4;
+		int32 type = 5;
+		int32 A_type_pow = 6;
+		int32 B_type_pow = 7;
+		int32 C_type_pow = 8;
+	}
+
+	repeated User users = 2;
+}
+
+// 동기화를 위해 클라이언트에서 서버로 주기적으로 보내주는 패킷이다.
+message SyncInfo_C {
+	int32 user_id = 1;
+	int32 x_pos = 2;
+	int32 y_pos = 3;
+	int32 vec = 4;
+	int32 type = 5;
+	int32 A_type_pow = 6;
+	int32 B_type_pow = 7;
+	int32 C_type_pow = 8; 
+}
