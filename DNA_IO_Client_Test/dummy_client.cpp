@@ -65,8 +65,8 @@ public:
 				boost::asio::placeholders::error)
 		);
 
-		boost::asio::ip::tcp::no_delay option(true);
-		m_Socket.set_option(option);
+		//boost::asio::ip::tcp::no_delay option(true);
+		//m_Socket.set_option(option);
 	}
 
 	void Close()
@@ -305,6 +305,8 @@ public:
 		boost::asio::io_service io_service;
 		auto endpoint = boost::asio::ip::tcp::endpoint(
 			boost::asio::ip::address::from_string("127.0.0.1"), PORT_NUM);
+		//auto endpoint = boost::asio::ip::tcp::endpoint(
+		//	boost::asio::ip::address::from_string("35.163.251.160"), PORT_NUM);
 
 		/*
 		dna_info::LoginRequest req;

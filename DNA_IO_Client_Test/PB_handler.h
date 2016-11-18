@@ -38,10 +38,7 @@ public:
 		PrintMessage(message);
 	}
 
-	void Handle(const dna_info::SyncInfo_S& message) const
-	{
-		PrintMessage(message);
-	}
+	void Handle(const dna_info::SyncInfo_S& message);
 	 
 	void Handle(const dna_info::UserInfo& message);
 

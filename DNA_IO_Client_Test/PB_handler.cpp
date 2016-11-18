@@ -150,3 +150,8 @@ void PacketHandler::Handle(const dna_info::UserInfo& message)
 	/* 서버와의 동기화를 시작합니다. */
 	m_client->Start_Sync();
 }
+
+void PacketHandler::Handle(const dna_info::SyncInfo_S& message)
+{
+	std::cout << "[Dummy Client] 서버로부터 동기 정보를 전송받았습니다." << std::endl;
+}

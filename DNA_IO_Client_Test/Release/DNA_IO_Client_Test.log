@@ -1,0 +1,21 @@
+﻿  dummy_client.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0501 to the compiler command line; or
+  - add _WIN32_WINNT=0x0501 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+  dummy_client_test.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0501 to the compiler command line; or
+  - add _WIN32_WINNT=0x0501 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+  PB_handler.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0501 to the compiler command line; or
+  - add _WIN32_WINNT=0x0501 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0501 (i.e. Windows XP target).
+  protocol.pb.cc
+  코드를 생성하고 있습니다.
+  All 2481 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  DNA_IO_Client_Test.vcxproj -> C:\Users\garden\documents\visual studio 2015\Projects\DNA_IO_Client_Test\Release\DNA_IO_Client_Test.exe
+  DNA_IO_Client_Test.vcxproj -> C:\Users\garden\documents\visual studio 2015\Projects\DNA_IO_Client_Test\Release\DNA_IO_Client_Test.pdb (Full PDB)
